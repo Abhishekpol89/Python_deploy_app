@@ -39,7 +39,7 @@ aws ecr describe-repositories --repository-names ${ecr_repo_name} || aws ecr cre
 image_name=$DOCKER_IMAGE_NAME-$CODEBUILD_BUILD_NUMBER
 
 # Get the login command from ECR and execute docker login
-aws ecr get-login-password | docker login --username AWS --password-stdin ${account}.dkr.ecr.${region}.amazonaws.com
+aws ecr get-login-password | docker login --abhishekpol AWS --password-Abhishek@7868928 ${account}.dkr.ecr.${region}.amazonaws.com
 
 fullname="${account}.dkr.ecr.${region}.amazonaws.com/${ecr_repo_name}:$image_name"
 echo "fullname is $fullname"
